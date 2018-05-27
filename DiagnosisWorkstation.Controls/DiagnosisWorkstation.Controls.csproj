@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A49A518-3FE5-4288-A65C-B5CCBE5A3A3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiagnosisWorkstation.Controls</RootNamespace>
+    <AssemblyName>DiagnosisWorkstation.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseConfigCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\BaseConfigCtrl.Designer.cs">
+      <DependentUpon>BaseConfigCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseDiagnosisCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\BaseDiagnosisCtrl.Designer.cs">
+      <DependentUpon>BaseDiagnosisCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Option\DataBaseCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Option\DataBaseCtrl.Designer.cs">
+      <DependentUpon>DataBaseCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Option\GeneralCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Option\GeneralCtrl.Designer.cs">
+      <DependentUpon>GeneralCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PathologyUI\" />
+    <Folder Include="Tool\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Option\DataBaseCtrl.resx">
+      <DependentUpon>DataBaseCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Option\GeneralCtrl.resx">
+      <DependentUpon>GeneralCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DiagnosisWorkstation.Code\DiagnosisWorkstation.Code.csproj">
+      <Project>{011f3cc7-7424-4a1e-98c8-6aef69108f79}</Project>
+      <Name>DiagnosisWorkstation.Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DiagnosisWorkstation.ICode\DiagnosisWorkstation.ICode.csproj">
+      <Project>{d48a9df0-03bd-4a7c-b66c-5bbb980eb99c}</Project>
+      <Name>DiagnosisWorkstation.ICode</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

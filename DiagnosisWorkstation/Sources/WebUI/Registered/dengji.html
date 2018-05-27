@@ -1,0 +1,615 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登记模块</title>
+    <link rel="stylesheet" type="text/css" href="css/input-style.css">
+    <link rel="stylesheet" type="text/css" href="css/more-style.css">
+    <link rel="stylesheet" href="buttons/buttons_bp_min.css">
+    <link rel="stylesheet" id="cal_style" href="dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/select2.css" />
+    <link rel="stylesheet" href="css/ripple.css" />
+    <link rel="stylesheet" href="semanticui/semantic.min.css" />
+    <link rel="stylesheet" href="semanticui/components/dropdown.css" />
+    <script type="text/javascript" src="dist/flatpickr.js"></script>
+    <script type="text/javascript" src="dist/fpready.js"></script>
+    <script>//转移到后台加载onload="fp_ready()"转移到后台加载</script>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/select2.js"></script>
+    <script type="text/javascript" src="layer/layer.js"></script>
+    <script type="text/javascript" src="semanticui/semantic.min.js"></script>
+    <script type="text/javascript" src="semanticui/components/dropdown.js"></script>
+</head>
+<body>
+    <br>
+    <table id="dengjitb" width="100%" border="0">
+        <tr>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip1" maxlength="32" class="effect-20" type="text" placeholder="">
+                    <label>冰冻标识</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <div>
+                    <span id="imagehover">
+                        <img onclick="ClickDcip1(dcip1.value);" height="30" width="30" src="./images/snow_flake_72px_508116_easyicon.net.png" alt="获取冰冻号">
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip2" onkeypress="EnterKeyPress(event.keyCode,this.id,dcip5.value + '|' + dcip2.value + '|' + dcip3.value + '|' + dcip4.value + '|' + dcip6.value + '|' + dcip7.value + '|' + dcip8.value);" maxlength="32" class="effect-19" type="text" placeholder="">
+                    <label>HISID</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <div>
+                    <span id="imagehover">
+                        <img onclick="ClickDcip2(dcip5.value + '|' + dcip2.value + '|' + dcip3.value + '|' + dcip4.value + '|' + dcip6.value + '|' + dcip7.value + '|' + dcip8.value);" height="30" width="30" src="./images/insight_86.349206349206px_1200648_easyicon.net.png" alt="提取信息">
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip3" onkeypress="EnterKeyPress(event.keyCode,this.id,dcip5.value + '|' + dcip2.value + '|' + dcip3.value + '|' + dcip4.value + '|' + dcip6.value + '|' + dcip7.value + '|' + dcip8.value);" maxlength="32" class="effect-20" type="text" placeholder="">
+                    <label>申请号</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip4" onkeypress="EnterKeyPress(event.keyCode,this.id,dcip5.value + '|' + dcip2.value + '|' + dcip3.value + '|' + dcip4.value + '|' + dcip6.value + '|' + dcip7.value + '|' + dcip8.value);" maxlength="32" class="effect-21" type="text" placeholder="">
+                    <label>病人ID</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip5" maxlength="32" onchange="JsInputOnChange(this.id,this.value);" oninput="JsInputOnChange(this.id,this.value);" class="effect-19" type="text" placeholder="">
+                    <label>病理号</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip6" onkeypress="EnterKeyPress(event.keyCode,this.id,dcip5.value + '|' + dcip2.value + '|' + dcip3.value + '|' + dcip4.value + '|' + dcip6.value + '|' + dcip7.value + '|' + dcip8.value);" maxlength="32" class="effect-19" type="text" placeholder="">
+                    <label>住院号</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip7" onkeypress="EnterKeyPress(event.keyCode,this.id,dcip5.value + '|' + dcip2.value + '|' + dcip3.value + '|' + dcip4.value + '|' + dcip6.value + '|' + dcip7.value + '|' + dcip8.value);" maxlength="32" class="effect-20" type="text" placeholder="">
+                    <label>门诊号</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip8" onkeypress="EnterKeyPress(event.keyCode,this.id,dcip5.value + '|' + dcip2.value + '|' + dcip3.value + '|' + dcip4.value + '|' + dcip6.value + '|' + dcip7.value + '|' + dcip8.value);" maxlength="32" class="effect-21" type="text" placeholder="">
+                    <label>体检号</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip9" maxlength="16" class="effect-19" type="text" placeholder="">
+                    <label>姓名</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+            <td>
+		<div id="dcdropdown10" class="ui selection dropdown">
+		    <input id="dcip10" class="effect-19" type="hidden" name="gender">
+		    <i class="dropdown icon"></i>
+		    <div class="default text"></div>
+		    <label>性别</label>
+		    <div class="menu">
+			<div class="item" data-value="男" data-text="男"><i class="male icon"></i>男</div>
+			<div class="item" data-value="女" data-text="女"><i class="female icon"></i>女</div>
+		    </div>
+		</div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip11" maxlength="4" class="effect-21" type="text" placeholder="">
+                    <label>年龄</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+		    <div style="position:absolute;right:6px;top:6px;">
+			<div id="dcdropdown11" class="ui dropdown label">
+    			    <div class="text">岁</div>
+    			    <i class="dropdown icon"></i>
+    			    <div class="menu">
+				<div class="item">岁</div>
+      				<div class="item">月</div>
+      				<div class="item">日</div>
+    			    </div>
+  			</div>
+		    </div>
+                </div>
+            </td>
+	    <td>
+		
+	    </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip12" oninput="JsInputOnChange(this.id,this.value);" class="effect-19" type="text" placeholder="">
+                    <label>送检单位</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+		    <div style="position:absolute;right:-2px;top:2px;display:none;">
+			<div id="dcip12_dropdown" class="ui right pointing dropdown icon button">
+			    <i class="hospital icon"></i>
+			    <div class="menu" id="dcip12_dropdown_item">
+				<div class="ui left search icon input">
+				    <i class="search icon"></i>
+				    <input type="text" name="search" placeholder="Search...">
+				</div>
+				<div class="divider"></div>
+			    </div>
+			</div>
+		    </div>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip13" oninput="JsInputOnChange(this.id,this.value);" class="effect-20" type="text" placeholder="">
+                    <label>送检科室</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+		    <div style="position:absolute;right:-2px;top:2px;display:none;">
+			<div id="dcip13_dropdown" class="ui right pointing scrolling dropdown icon button">
+			    <i class="puzzle icon"></i>
+			    <div class="menu" id="dcip13_dropdown_item">
+			        <div class="ui left search icon input">
+				    <i class="search icon"></i>
+				    <input type="text" name="search" placeholder="Search...">
+				</div>
+				<div class="divider"></div>
+				<div class="header">
+				    <i class="tags icon"></i>
+				    请选择送检科室
+				</div>
+			    </div>
+			</div>
+		    </div>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="dcip14" oninput="JsInputOnChange(this.id,this.value);" class="effect-21" type="text" placeholder="">
+                    <label>送检医生</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+		    <div style="position:absolute;right:-2px;top:2px;display:none;">
+			<div id="dcip14_dropdown" class="ui right pointing dropdown icon button">
+			    <i class="doctor icon"></i>
+			    <div class="menu" id="dcip14_dropdown_item">
+				<div class="ui left search icon input">
+				<i class="search icon"></i>
+				<input type="text" name="search" placeholder="Search...">
+				</div>
+				<div class="divider"></div>
+				<div class="header">
+				    <i class="tags icon"></i>
+				    请选择送检医生
+				</div>
+			    </div>
+			</div>
+		    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-3 input-effect">
+                    <select id="biaobenName" class="effect-20" multiple="multiple" style="width:100%"></select>
+                    <label>标本名称</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="flatpickr-style" class="flatpickr effect-20" type="text" placeholder="" data-date-format="Y-m-d H:i:S" data-allow-input="true" data-enable-time="true" data-time_24hr="true" data-enable-seconds="true">
+                    <label>标本申请/送检时间</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="col-3 input-effect">
+                    <input id="flatpickr-tryme" class="flatpickr effect-21" type="text" placeholder="" data-date-format="Y-m-d H:i:S" data-allow-input="true" data-enable-time="true" data-time_24hr="true" data-enable-seconds="true">
+                    <label>标本接收时间</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            </td>
+        </tr>
+<tr>
+                            <td colspan="3">
+                                <div class="col-3 input-effect">
+                                    <input id="dcip15" oninput="JsInputOnChange(this.id,this.value);" class="effect-19" type="text" placeholder="">
+                                    <label>临床诊断</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+    </table>
+    <div id="morestyle" style="width:95%; margin: 10px 1.5%;">
+        <div class="accordion">
+            <dl>
+                <dt>
+                    <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">更多信息</a>
+                </dt>
+                <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+                    <table width="100%" border="0">
+                        
+                        <tr>
+                            <td colspan="3">
+                                <div class="col-3 input-effect">
+				    <p id="dcppp16" contenteditable="true" class="effect-20" type="text" placeholder="" style="margin-bottom: 0px;padding-left: 14px;padding-right: 14px;padding-top: 7px;padding-bottom: 7px;"></p>
+                                    <label>病史摘要</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="col-3 input-effect">
+				    <p id="dcppp17" contenteditable="true" class="effect-20" type="text" placeholder="" style="margin-bottom: 0px;padding-left: 14px;padding-right: 14px;padding-top: 7px;padding-bottom: 7px;"></p>
+                                    <label>手术所见</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip18" maxlength="18" class="effect-19" type="text" placeholder="">
+                                    <label>身份证号</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip19" oninput="JsInputOnChange(this.id,this.value);" maxlength="6" class="effect-20" type="text" placeholder="">
+                                    <label>婚姻状况</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip20" oninput="JsInputOnChange(this.id,this.value);" class="effect-21" type="text" placeholder="">
+                                    <label>取材医生</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip21" oninput="JsInputOnChange(this.id,this.value);" maxlength="10" class="effect-19" type="text" placeholder="">
+                                    <label>民族</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip22" oninput="JsInputOnChange(this.id,this.value);" maxlength="8" class="effect-20" type="text" placeholder="">
+                                    <label>籍贯</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip23" oninput="JsInputOnChange(this.id,this.value);" class="effect-21" type="text" placeholder="">
+                                    <label>职业</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip24" maxlength="11" class="effect-19" type="text" placeholder="">
+                                    <label>联系手机</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip25" class="effect-20" type="text" placeholder="">
+                                    <label>联系信息</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip26" class="effect-21" type="text" placeholder="">
+                                    <label>末次月经</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip27" maxlength="8" class="effect-19" type="text" placeholder="">
+                                    <label>病区</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip28" maxlength="8" class="effect-20" type="text" placeholder="">
+                                    <label>床号</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip29" maxlength="4" class="effect-21" type="text" placeholder="">
+                                    <label>绝经</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip30" oninput="JsInputOnChange(this.id,this.value);" class="effect-19" type="text" placeholder="">
+                                    <label>标本类型</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip31" oninput="JsInputOnChange(this.id,this.value);" class="effect-20" type="text" placeholder="">
+                                    <label>标本情况</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip32" oninput="JsInputOnChange(this.id,this.value);" class="effect-21" type="text" placeholder="">
+                                    <label>标本接收人</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip33" oninput="JsInputOnChange(this.id,this.value);" class="effect-19" type="text" placeholder="">
+                                    <label>费用类别</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip34" class="effect-20" type="text" placeholder="">
+                                    <label>费用总数</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                		<div id="imagehover34" style="display:none;">
+                    		    <span id="imagehover">
+                        		<img onclick="ClickDcip5(dcip5.value);" height="30" width="30" src="./images/money_bag_speech_bubble_96px.png" alt="费用详情">
+                    		    </span>
+				</div>
+                            </td>
+                            <td>
+                                <div class="col-3 input-effect">
+                                    <input id="dcip35" oninput="JsInputOnChange(this.id,this.value);" class="effect-21" type="text" placeholder="">
+                                    <label>标本不合格原因</label>
+                                    <span class="focus-border">
+                                        <i></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div style="position:fixed; right:30px; bottom:10px;">
+	<button id="btn_new" onclick="JsWhatClick(this.id,'新建',this.value);" class="button button_border" data-button="blue">新 建</button>
+	<button id="btn_save" onclick="JsWhatClick(this.id,'保存',this.value);" class="button button_shadow" data-button="green">保 存</button>
+    </div>
+
+    <script>
+	function getBBMC(){return JSON.stringify($("#biaobenName").select2("data"));}
+    </script>
+
+    <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+    <script>
+        // JavaScript for label effects only
+        $(window).load(function () {
+            $(".col-3 input").val("");
+
+            $(".input-effect input").focusout(function () {
+                if ($(this).val() != "") {
+                    $(this).addClass("has-content");
+                } else {
+                    $(this).removeClass("has-content");
+                }
+            })
+
+            $(".col-3 p").text("");
+
+            $(".input-effect p").focusout(function () {
+                if ($(this).text() != "") {
+                    $(this).addClass("has-content");
+                } else {
+                    $(this).removeClass("has-content");
+                }
+            })
+        });
+    </script>
+
+    <script type="text/javascript">
+        //uses classList, setAttribute, and querySelectorAll
+        //if you want this to work in IE8/9 youll need to polyfill these
+        (function () {
+            var d = document,
+                accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+                setAria,
+                setAccordionAria,
+                switchAccordion,
+                touchSupported = ('ontouchstart' in window),
+                pointerSupported = ('pointerdown' in window);
+
+            skipClickDelay = function (e) {
+                e.preventDefault();
+                e.target.click();
+            }
+
+            setAriaAttr = function (el, ariaType, newProperty) {
+                el.setAttribute(ariaType, newProperty);
+            };
+            setAccordionAria = function (el1, el2, expanded) {
+                switch (expanded) {
+                    case "true":
+                        setAriaAttr(el1, 'aria-expanded', 'true');
+                        setAriaAttr(el2, 'aria-hidden', 'false');
+                        break;
+                    case "false":
+                        setAriaAttr(el1, 'aria-expanded', 'false');
+                        setAriaAttr(el2, 'aria-hidden', 'true');
+                        break;
+                    default:
+                        break;
+                }
+            };
+            //function
+            switchAccordion = function (e) {
+                //console.log("triggered");
+                e.preventDefault();
+                var thisAnswer = e.target.parentNode.nextElementSibling;
+                var thisQuestion = e.target;
+                if (thisAnswer.classList.contains('is-collapsed')) {
+                    setAccordionAria(thisQuestion, thisAnswer, 'true');
+                } else {
+                    setAccordionAria(thisQuestion, thisAnswer, 'false');
+                }
+                thisQuestion.classList.toggle('is-collapsed');
+                thisQuestion.classList.toggle('is-expanded');
+                thisAnswer.classList.toggle('is-collapsed');
+                thisAnswer.classList.toggle('is-expanded');
+
+                thisAnswer.classList.toggle('animateIn');
+		if($("#imagehover34").length>0){$("#imagehover34").toggle();}
+            };
+            for (var i = 0, len = accordionToggles.length; i < len; i++) {
+                if (touchSupported) {
+                    accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+                }
+                if (pointerSupported) {
+                    accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+                }
+                accordionToggles[i].addEventListener('click', switchAccordion, false);
+            }
+        })();
+    </script>
+
+
+    <script>
+	$(document).ready(function() {
+	    $("#dcdropdown10").dropdown();
+	    $("#dcdropdown11").dropdown();
+	    $("div[id^='dcip'][id$='_dropdown']").dropdown({
+	    	    onChange: function(value, text, $selectedItem) {
+		    var showinputvalue = text;
+		    if(text.indexOf("</div>")>-1)
+		    {
+			showinputvalue = text.substring(text.indexOf("</div>") + 6, text.length);
+		    }
+		    var dcipdropdownID = this.id.substring(0, this.id.indexOf("_"));
+		    $("#" + dcipdropdownID).focus();
+		    $("#" + dcipdropdownID).val(showinputvalue.trim());
+	    	}
+	    });
+            var mydate = new Date();//默认为当前时间（+0800时区）
+	    $("#flatpickr-style").attr("data-default-date",mydate.toTimeString());
+	    $("#flatpickr-tryme").attr("data-default-date",mydate.toTimeString());
+	});
+    </script>
+
+
+</body>
+</html>

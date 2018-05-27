@@ -1,0 +1,37 @@
+.cicle {
+	background: red;
+	border-radius: 60%;
+	width:15px;
+	height:15px;
+	color:#FDFCFC;
+	position:relative;
+	left: 69%;
+	margin-top: -86%;
+	font-size: 9px;
+	font-weight: bold;
+	float:left;
+	text-align:center;
+}
+
+.tx {
+	width:55px;
+	height:55px;
+	transition:width 0.5s, height 0.5s;
+	-moz-transition:width 0.5s, height 0.5s, -moz-transform 0.5s;
+	/* Firefox 4*/
+	-webkit-transition:width 0.5s, height 0.5s, -webkit-transform 0.5s;
+	/* Safari and Chrome*/
+	-o-transition:width 0.5s, height 0.5s, -o-transform 0.5s;
+	/* Opera*/
+}
+.tx:hover {
+	width:55px;
+	height:55px;
+	transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	/* Firefox 4*/
+	-webkit-transform:rotate(360deg);
+	/* Safari and Chrome*/
+	-o-transform:rotate(360deg);
+	/* Opera*/
+}

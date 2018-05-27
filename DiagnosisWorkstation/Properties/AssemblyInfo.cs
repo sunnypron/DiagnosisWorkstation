@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("DiagnosisWorkstation")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("病理诊断工作站")]
+[assembly: AssemblyDescription("千屏病理信息化管理系统之病理诊断工作站主界面层")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DiagnosisWorkstation")]
+[assembly: AssemblyCompany("武汉千屏影像技术有限责任公司")]
+[assembly: AssemblyProduct("千屏科技病理辅助诊断系统")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("ChampionImage")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("7004ebe6-a3ca-4fab-a354-815a16d2069a")]
+[assembly: Guid("5941f8ea-8b25-4b6f-9b70-6f40af43bd60")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

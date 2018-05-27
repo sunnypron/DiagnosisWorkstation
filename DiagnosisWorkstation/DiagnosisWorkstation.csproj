@@ -30,7 +30,102 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>诊断工作站.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AbstractFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\AbstractFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="AbstractProduct, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\AbstractProduct.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\Aspect.dll</HintPath>
+    </Reference>
+    <Reference Include="BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CaseList, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\CaseList.dll</HintPath>
+    </Reference>
+    <Reference Include="Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ConcreteFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\ConcreteFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="DCDapFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DCDapFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="DCDapModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DCDapModel.dll</HintPath>
+    </Reference>
+    <Reference Include="DCDapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DCDapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DcHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DcHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DCHTMUI, Version=1.4.3.30081, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DCHTMUI.dll</HintPath>
+    </Reference>
+    <Reference Include="IBLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\IBLL.dll</HintPath>
+    </Reference>
+    <Reference Include="IDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\IDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageListView, Version=11.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\ImageListView.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor, Version=2.5.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\ImageProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="InfoSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\InfoSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Product, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\Product.dll</HintPath>
+    </Reference>
+    <Reference Include="QpFormsControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\QpFormsControl.dll</HintPath>
+    </Reference>
+    <Reference Include="QpImageProcessControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\QpImageProcessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceGrid, Version=4.40.6611.31175, Culture=neutral, PublicKeyToken=df6f5e538749e85d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\SourceGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLServerDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\SQLServerDAL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,13 +141,22 @@
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="MainForm.designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -63,6 +167,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,6 +177,545 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Sources\log4net.config" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\cef.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\cef_100_percent.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\cef_200_percent.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\cef_extensions.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\devtools_resources.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\am.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\ar.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\bg.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\bn.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\ca.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\cs.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\da.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\de.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\el.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\en-GB.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\en-US.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\es-419.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\es.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\et.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\fa.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\fi.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\fil.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\fr.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\gu.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\he.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\hi.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\hr.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\hu.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\id.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\it.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\ja.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\kn.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\ko.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\lt.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\lv.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\ml.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\mr.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\ms.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\nb.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\nl.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\pl.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\pt-BR.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\pt-PT.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\ro.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\ru.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\sk.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\sl.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\sr.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\sv.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\sw.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\ta.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\te.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\th.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\tr.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\uk.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\vi.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\zh-CN.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\locales\zh-TW.pak" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\icudtl.dat" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\natives_blob.bin" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\PepperFlash\manifest.json" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\snapshot_blob.bin" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\icudtl.dat" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\natives_blob.bin" />
+    <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\snapshot_blob.bin" />
+    <None Include="Sources\WebUI\Enregister\font\iconfont.eot" />
+    <None Include="Sources\WebUI\Enregister\font\iconfont.ttf" />
+    <None Include="Sources\WebUI\Enregister\font\iconfont.woff" />
+    <None Include="Sources\WebUI\Registered\font\iconfont.eot" />
+    <None Include="Sources\WebUI\Registered\font\iconfont.ttf" />
+    <None Include="Sources\WebUI\Registered\font\iconfont.woff" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\basic\assets\fonts\icons.eot" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\basic\assets\fonts\icons.ttf" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\basic\assets\fonts\icons.woff" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\default\assets\fonts\icons.eot" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\default\assets\fonts\icons.otf" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\default\assets\fonts\icons.ttf" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\default\assets\fonts\icons.woff" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\default\assets\fonts\icons.woff2" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\github\assets\fonts\octicons-local.ttf" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\github\assets\fonts\octicons.ttf" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\github\assets\fonts\octicons.woff" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\material\assets\fonts\icons.eot" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\material\assets\fonts\icons.ttf" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\material\assets\fonts\icons.woff" />
+    <None Include="Sources\WebUI\Registered\semanticui\themes\material\assets\fonts\icons.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Access.png" />
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\Camara.png" />
+    <Content Include="Resources\Chart.png" />
+    <Content Include="Resources\Check.png" />
+    <Content Include="Resources\Checked.png" />
+    <Content Include="Resources\Close.png" />
+    <Content Include="Resources\Create.png" />
+    <Content Include="Resources\Custom.png" />
+    <Content Include="Resources\Customer.png" />
+    <Content Include="Resources\Document.png" />
+    <Content Include="Resources\Download.png" />
+    <Content Include="Resources\Edit.png" />
+    <Content Include="Resources\Exit.png" />
+    <Content Include="Resources\Favorites.png" />
+    <Content Include="Resources\Focus.png" />
+    <Content Include="Resources\Hart.png" />
+    <Content Include="Resources\Logout.png" />
+    <Content Include="Resources\Message.png" />
+    <Content Include="Resources\Modify.jpg" />
+    <Content Include="Resources\Modify.png" />
+    <Content Include="Resources\Next.png" />
+    <Content Include="Resources\Point.png" />
+    <Content Include="Resources\Pre.png" />
+    <Content Include="Resources\Preview.png" />
+    <Content Include="Resources\Print.png" />
+    <Content Include="Resources\Printer.png" />
+    <Content Include="Resources\Refresh.png" />
+    <Content Include="Resources\ReportType.txt" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\Send.png" />
+    <Content Include="Resources\Star.png" />
+    <Content Include="Resources\Structurization.png" />
+    <Content Include="Resources\诊断工作站.ico" />
+    <Content Include="Sources\AbstractFactory.dll" />
+    <Content Include="Sources\AbstractProduct.dll" />
+    <Content Include="Sources\AForge\AForge.Controls.dll" />
+    <Content Include="Sources\AForge\AForge.dll" />
+    <Content Include="Sources\AForge\AForge.Imaging.dll" />
+    <Content Include="Sources\AForge\AForge.Math.dll" />
+    <Content Include="Sources\AForge\AForge.Video.DirectShow.dll" />
+    <Content Include="Sources\AForge\AForge.Video.dll" />
+    <Content Include="Sources\Aspect.dll" />
+    <Content Include="Sources\BLL.dll" />
+    <Content Include="Sources\CaseList.dll" />
+    <Content Include="Sources\Client.dll" />
+    <Content Include="Sources\commInterface.dll" />
+    <Content Include="Sources\ConcreteFactory.dll" />
+    <Content Include="Sources\DatabaseConnection.dll" />
+    <Content Include="Sources\DCDapFactory.dll" />
+    <Content Include="Sources\DCDapModel.dll" />
+    <Content Include="Sources\DCDapper.dll" />
+    <Content Include="Sources\DcHelper.dll" />
+    <Content Include="Sources\DCHTMUI.dll" />
+    <Content Include="Sources\DirectShowLib-2005.dll" />
+    <Content Include="Sources\FastReport\FastReport.Bars.dll" />
+    <Content Include="Sources\FastReport\FastReport.dll" />
+    <Content Include="Sources\FastReport\FastReport.Editor.dll" />
+    <Content Include="Sources\Files\Newtonsoft.Json.xml" />
+    <Content Include="Sources\Files\ReportType.txt" />
+    <Content Include="Sources\IBLL.dll" />
+    <Content Include="Sources\IDAL.dll" />
+    <Content Include="Sources\ImageListView.dll" />
+    <Content Include="Sources\ImageProcessor.dll" />
+    <Content Include="Sources\InfoSystem.dll" />
+    <Content Include="Sources\log4net.dll" />
+    <Content Include="Sources\MySql.Data.dll" />
+    <Content Include="Sources\Newtonsoft.Json.dll" />
+    <Content Include="Sources\Newtonsoft.Json.xml" />
+    <Content Include="Sources\OracleDAL.dll" />
+    <Content Include="Sources\Product.dll" />
+    <Content Include="Sources\QpFormsControl.dll" />
+    <Content Include="Sources\QpImageProcessControl.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\d3dcompiler_43.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\d3dcompiler_47.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\libcef.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\libcfx64.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\libEGL.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\libGLESv2.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\PepperFlash\pepflashplayer.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\widevinecdmadapter.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\d3dcompiler_43.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\d3dcompiler_47.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\libcef.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\libcfx.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\libEGL.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\libGLESv2.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\widevinecdmadapter.dll" />
+    <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x86\wow_helper.exe" />
+    <Content Include="Sources\SourceGrid.dll" />
+    <Content Include="Sources\SQLServerDAL.dll" />
+    <Content Include="Sources\WebUI\Enregister\buttons\buttons.css" />
+    <Content Include="Sources\WebUI\Enregister\buttons\buttons_bp.css" />
+    <Content Include="Sources\WebUI\Enregister\buttons\buttons_bp_min.css" />
+    <Content Include="Sources\WebUI\Enregister\buttons\button_bg.png" />
+    <Content Include="Sources\WebUI\Enregister\css\component.css" />
+    <Content Include="Sources\WebUI\Enregister\css\demo.css" />
+    <Content Include="Sources\WebUI\Enregister\css\htmleaf-demo24.css" />
+    <Content Include="Sources\WebUI\Enregister\css\iconwarn.css" />
+    <Content Include="Sources\WebUI\Enregister\css\input-style - 副本.css" />
+    <Content Include="Sources\WebUI\Enregister\css\input-style.css" />
+    <Content Include="Sources\WebUI\Enregister\css\layui.css" />
+    <Content Include="Sources\WebUI\Enregister\css\more-style - 副本.css" />
+    <Content Include="Sources\WebUI\Enregister\css\more-style.css" />
+    <Content Include="Sources\WebUI\Enregister\css\normalize.css" />
+    <Content Include="Sources\WebUI\Enregister\css\normalize24.css" />
+    <Content Include="Sources\WebUI\Enregister\css\p-style.css" />
+    <Content Include="Sources\WebUI\Enregister\css\select2 - 副本.css" />
+    <Content Include="Sources\WebUI\Enregister\css\select2.css" />
+    <Content Include="Sources\WebUI\Enregister\dist\flatpickr.js" />
+    <Content Include="Sources\WebUI\Enregister\dist\flatpickr.min.css" />
+    <Content Include="Sources\WebUI\Enregister\dist\fpready.js" />
+    <Content Include="Sources\WebUI\Enregister\font\iconfont.svg" />
+    <Content Include="Sources\WebUI\Enregister\iconwarn.html" />
+    <Content Include="Sources\WebUI\Enregister\images\cardiology_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Enregister\images\cardiology_blue.png" />
+    <Content Include="Sources\WebUI\Enregister\images\dentist_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Enregister\images\dentist_blue.png" />
+    <Content Include="Sources\WebUI\Enregister\images\doctor_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Enregister\images\doctor_blue.png" />
+    <Content Include="Sources\WebUI\Enregister\images\doctor_briefcase_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Enregister\images\doctor_briefcase_blue.png" />
+    <Content Include="Sources\WebUI\Enregister\images\hospital_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Enregister\images\hospital_blue.png" />
+    <Content Include="Sources\WebUI\Enregister\images\microscope_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Enregister\images\microscope_blue.png" />
+    <Content Include="Sources\WebUI\Enregister\images\pills_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Enregister\images\pills_blue.png" />
+    <Content Include="Sources\WebUI\Enregister\images\wheelchair_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Enregister\images\wheelchair_blue.png" />
+    <Content Include="Sources\WebUI\Enregister\js\classie.js" />
+    <Content Include="Sources\WebUI\Enregister\js\iconwarn.js" />
+    <Content Include="Sources\WebUI\Enregister\js\jquery-2.1.1.min.js" />
+    <Content Include="Sources\WebUI\Enregister\js\jquery.levelup.js" />
+    <Content Include="Sources\WebUI\Enregister\js\select2 - 副本.js" />
+    <Content Include="Sources\WebUI\Enregister\js\select2.js" />
+    <Content Include="Sources\WebUI\Enregister\layer\layer.js" />
+    <Content Include="Sources\WebUI\Enregister\layer\skin\default\icon-ext.png" />
+    <Content Include="Sources\WebUI\Enregister\layer\skin\default\icon.png" />
+    <Content Include="Sources\WebUI\Enregister\layer\skin\default\layer.css" />
+    <Content Include="Sources\WebUI\Enregister\layer\skin\default\loading-0.gif" />
+    <Content Include="Sources\WebUI\Enregister\layer\skin\default\loading-1.gif" />
+    <Content Include="Sources\WebUI\Enregister\layer\skin\default\loading-2.gif" />
+    <Content Include="Sources\WebUI\Enregister\zhenduan.html" />
+    <Content Include="Sources\WebUI\Registered\buttons\buttons.css" />
+    <Content Include="Sources\WebUI\Registered\buttons\buttons_bp.css" />
+    <Content Include="Sources\WebUI\Registered\buttons\buttons_bp_min.css" />
+    <Content Include="Sources\WebUI\Registered\buttons\button_bg.png" />
+    <Content Include="Sources\WebUI\Registered\css\component.css" />
+    <Content Include="Sources\WebUI\Registered\css\demo.css" />
+    <Content Include="Sources\WebUI\Registered\css\htmleaf-demo24.css" />
+    <Content Include="Sources\WebUI\Registered\css\iconwarn.css" />
+    <Content Include="Sources\WebUI\Registered\css\input-style - 副本 %282%29.css" />
+    <Content Include="Sources\WebUI\Registered\css\input-style - 副本.css" />
+    <Content Include="Sources\WebUI\Registered\css\input-style.css" />
+    <Content Include="Sources\WebUI\Registered\css\layui.css" />
+    <Content Include="Sources\WebUI\Registered\css\more-style - 副本.css" />
+    <Content Include="Sources\WebUI\Registered\css\more-style.css" />
+    <Content Include="Sources\WebUI\Registered\css\normalize.css" />
+    <Content Include="Sources\WebUI\Registered\css\normalize24.css" />
+    <Content Include="Sources\WebUI\Registered\css\p-style.css" />
+    <Content Include="Sources\WebUI\Registered\css\ripple - 副本.css" />
+    <Content Include="Sources\WebUI\Registered\css\ripple.css" />
+    <Content Include="Sources\WebUI\Registered\css\select2 - 副本.css" />
+    <Content Include="Sources\WebUI\Registered\css\select2.css" />
+    <Content Include="Sources\WebUI\Registered\dengji.html" />
+    <Content Include="Sources\WebUI\Registered\dist\flatpickr.js" />
+    <Content Include="Sources\WebUI\Registered\dist\flatpickr.min.css" />
+    <Content Include="Sources\WebUI\Registered\dist\fpready - 副本.js" />
+    <Content Include="Sources\WebUI\Registered\dist\fpready.js" />
+    <Content Include="Sources\WebUI\Registered\font\iconfont.svg" />
+    <Content Include="Sources\WebUI\Registered\images\cardiology_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Registered\images\cardiology_blue.png" />
+    <Content Include="Sources\WebUI\Registered\images\Christmas_Snowflake_snow_72px_520177_easyicon.net.png" />
+    <Content Include="Sources\WebUI\Registered\images\christmas_snow_72px_12416_easyicon.net.png" />
+    <Content Include="Sources\WebUI\Registered\images\dentist_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Registered\images\dentist_blue.png" />
+    <Content Include="Sources\WebUI\Registered\images\doctor_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Registered\images\doctor_blue.png" />
+    <Content Include="Sources\WebUI\Registered\images\doctor_briefcase_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Registered\images\doctor_briefcase_blue.png" />
+    <Content Include="Sources\WebUI\Registered\images\hospital_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Registered\images\hospital_blue.png" />
+    <Content Include="Sources\WebUI\Registered\images\insight_86.349206349206px_1200648_easyicon.net.png" />
+    <Content Include="Sources\WebUI\Registered\images\microscope_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Registered\images\microscope_blue.png" />
+    <Content Include="Sources\WebUI\Registered\images\money_bag_speech_bubble_96px.png" />
+    <Content Include="Sources\WebUI\Registered\images\pills_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Registered\images\pills_blue.png" />
+    <Content Include="Sources\WebUI\Registered\images\snow_72px_1165533_easyicon.net.png" />
+    <Content Include="Sources\WebUI\Registered\images\snow_72px_1171695_easyicon.net.png" />
+    <Content Include="Sources\WebUI\Registered\images\snow_flake_72px_1185697_easyicon.net.png" />
+    <Content Include="Sources\WebUI\Registered\images\snow_flake_72px_508116_easyicon.net.png" />
+    <Content Include="Sources\WebUI\Registered\images\wheelchair_blue - 副本.png" />
+    <Content Include="Sources\WebUI\Registered\images\wheelchair_blue.png" />
+    <Content Include="Sources\WebUI\Registered\images\ZUNE_72px_581623_easyicon.net.png" />
+    <Content Include="Sources\WebUI\Registered\js\classie.js" />
+    <Content Include="Sources\WebUI\Registered\js\iconwarn.js" />
+    <Content Include="Sources\WebUI\Registered\js\jquery-2.1.1.min.js" />
+    <Content Include="Sources\WebUI\Registered\js\jquery.levelup.js" />
+    <Content Include="Sources\WebUI\Registered\js\select2 - 副本.js" />
+    <Content Include="Sources\WebUI\Registered\js\select2.js" />
+    <Content Include="Sources\WebUI\Registered\layer\layer.js" />
+    <Content Include="Sources\WebUI\Registered\layer\skin\default\icon-ext.png" />
+    <Content Include="Sources\WebUI\Registered\layer\skin\default\icon.png" />
+    <Content Include="Sources\WebUI\Registered\layer\skin\default\layer.css" />
+    <Content Include="Sources\WebUI\Registered\layer\skin\default\loading-0.gif" />
+    <Content Include="Sources\WebUI\Registered\layer\skin\default\loading-1.gif" />
+    <Content Include="Sources\WebUI\Registered\layer\skin\default\loading-2.gif" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\accordion.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\accordion.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\accordion.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\accordion.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\ad.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\ad.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\api.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\api.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\breadcrumb.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\breadcrumb.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\button.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\button.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\card.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\card.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\checkbox.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\checkbox.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\checkbox.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\checkbox.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\colorize.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\colorize.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\comment.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\comment.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\container.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\container.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dimmer.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dimmer.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dimmer.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dimmer.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\divider.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\divider.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dropdown - 副本 %282%29.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dropdown - 副本.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dropdown.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dropdown.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dropdown.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\dropdown.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\embed.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\embed.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\embed.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\embed.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\feed.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\feed.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\flag.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\flag.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\form.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\form.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\form.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\form.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\grid.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\grid.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\header.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\header.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\icon.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\icon.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\image.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\image.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\input.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\input.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\item.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\item.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\label.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\label.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\list.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\list.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\loader.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\loader.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\menu.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\menu.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\message.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\message.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\modal.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\modal.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\modal.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\modal.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\nag.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\nag.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\nag.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\nag.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\popup.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\popup.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\popup.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\popup.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\progress.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\progress.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\progress.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\progress.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\rail.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\rail.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\rating.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\rating.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\rating.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\rating.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\reset.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\reset.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\reveal.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\reveal.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\search.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\search.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\search.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\search.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\segment.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\segment.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\shape.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\shape.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\shape.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\shape.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\sidebar.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\sidebar.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\sidebar.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\sidebar.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\site.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\site.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\site.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\site.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\state.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\state.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\statistic.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\statistic.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\step.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\step.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\sticky.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\sticky.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\sticky.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\sticky.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\tab.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\tab.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\tab.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\tab.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\table.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\table.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\transition.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\transition.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\transition.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\transition.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\video.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\video.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\video.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\video.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\visibility.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\visibility.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\visit.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\visit.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\components\修改记录.txt" />
+    <Content Include="Sources\WebUI\Registered\semanticui\semantic.min.css" />
+    <Content Include="Sources\WebUI\Registered\semanticui\semantic.min.js" />
+    <Content Include="Sources\WebUI\Registered\semanticui\themes\basic\assets\fonts\icons.svg" />
+    <Content Include="Sources\WebUI\Registered\semanticui\themes\default\assets\fonts\icons.svg" />
+    <Content Include="Sources\WebUI\Registered\semanticui\themes\default\assets\images\flags.png" />
+    <Content Include="Sources\WebUI\Registered\semanticui\themes\github\assets\fonts\octicons.svg" />
+    <Content Include="Sources\WebUI\Registered\semanticui\themes\material\assets\fonts\icons.svg" />
+    <Content Include="Sources\WebUI\Setting\ReportType.txt" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\01\0\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\01\1\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\01\2\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\01\3\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\01\4\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\01\5\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\01\6\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\01\7\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\02\0\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\02\1\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\02\2\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\02\3\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\02\4\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\02\5\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\02\6\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\02\7\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\BL277_01.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\BL277\BL277_02.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\meiv\0\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\meiv\1\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\meiv\2\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\meiv\3\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\meiv\4\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\meiv\5\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\meiv\6\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\anaimg\meiv\7\0_0.jpg" />
+    <Content Include="Sources\WebUI\Slides\css\openseadragon.css" />
+    <Content Include="Sources\WebUI\Slides\images\fullpage_grouphover.png" />
+    <Content Include="Sources\WebUI\Slides\images\fullpage_hover.png" />
+    <Content Include="Sources\WebUI\Slides\images\fullpage_pressed.png" />
+    <Content Include="Sources\WebUI\Slides\images\fullpage_rest.png" />
+    <Content Include="Sources\WebUI\Slides\images\home_grouphover.png" />
+    <Content Include="Sources\WebUI\Slides\images\home_hover.png" />
+    <Content Include="Sources\WebUI\Slides\images\home_pressed.png" />
+    <Content Include="Sources\WebUI\Slides\images\home_rest.png" />
+    <Content Include="Sources\WebUI\Slides\images\next_grouphover.png" />
+    <Content Include="Sources\WebUI\Slides\images\next_hover.png" />
+    <Content Include="Sources\WebUI\Slides\images\next_pressed.png" />
+    <Content Include="Sources\WebUI\Slides\images\next_rest.png" />
+    <Content Include="Sources\WebUI\Slides\images\previous_grouphover.png" />
+    <Content Include="Sources\WebUI\Slides\images\previous_hover.png" />
+    <Content Include="Sources\WebUI\Slides\images\previous_pressed.png" />
+    <Content Include="Sources\WebUI\Slides\images\previous_rest.png" />
+    <Content Include="Sources\WebUI\Slides\images\rotateleft_grouphover.png" />
+    <Content Include="Sources\WebUI\Slides\images\rotateleft_hover.png" />
+    <Content Include="Sources\WebUI\Slides\images\rotateleft_pressed.png" />
+    <Content Include="Sources\WebUI\Slides\images\rotateleft_rest.png" />
+    <Content Include="Sources\WebUI\Slides\images\rotateright_grouphover.png" />
+    <Content Include="Sources\WebUI\Slides\images\rotateright_hover.png" />
+    <Content Include="Sources\WebUI\Slides\images\rotateright_pressed.png" />
+    <Content Include="Sources\WebUI\Slides\images\rotateright_rest.png" />
+    <Content Include="Sources\WebUI\Slides\images\zoomin_grouphover.png" />
+    <Content Include="Sources\WebUI\Slides\images\zoomin_hover.png" />
+    <Content Include="Sources\WebUI\Slides\images\zoomin_pressed.png" />
+    <Content Include="Sources\WebUI\Slides\images\zoomin_rest.png" />
+    <Content Include="Sources\WebUI\Slides\images\zoomout_grouphover.png" />
+    <Content Include="Sources\WebUI\Slides\images\zoomout_hover.png" />
+    <Content Include="Sources\WebUI\Slides\images\zoomout_pressed.png" />
+    <Content Include="Sources\WebUI\Slides\images\zoomout_rest.png" />
+    <Content Include="Sources\WebUI\Slides\index.html" />
+    <Content Include="Sources\WebUI\Slides\js\drag.js" />
+    <Content Include="Sources\WebUI\Slides\js\jquery-1.11.1.min.js" />
+    <Content Include="Sources\WebUI\Slides\js\openseadragon.js" />
+    <Content Include="Sources\WebUI\Slides\js\openseadragon.min.js" />
+    <Content Include="诊断工作站.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Diagnoses\" />
+    <Folder Include="Report\" />
+    <Folder Include="Sources\WebUI\Slides\earth_files\" />
+    <Folder Include="Specimen\" />
+    <Folder Include="Tool\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DiagnosisWorkstation.Code\DiagnosisWorkstation.Code.csproj">
+      <Project>{011f3cc7-7424-4a1e-98c8-6aef69108f79}</Project>
+      <Name>DiagnosisWorkstation.Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DiagnosisWorkstation.Controls\DiagnosisWorkstation.Controls.csproj">
+      <Project>{5a49a518-3fe5-4288-a65c-b5ccbe5a3a3e}</Project>
+      <Name>DiagnosisWorkstation.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DiagnosisWorkstation.ICode\DiagnosisWorkstation.ICode.csproj">
+      <Project>{d48a9df0-03bd-4a7c-b66c-5bbb980eb99c}</Project>
+      <Name>DiagnosisWorkstation.ICode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DiagnosisWorkstation.Model\DiagnosisWorkstation.Model.csproj">
+      <Project>{174e737d-bf88-45d9-a587-79e308d78e4e}</Project>
+      <Name>DiagnosisWorkstation.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

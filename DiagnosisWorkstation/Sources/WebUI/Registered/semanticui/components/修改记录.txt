@@ -1,0 +1,3 @@
+修改dropdown.js文件的
+visible: function()两处
+均已//dcfrog标出

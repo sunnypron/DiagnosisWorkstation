@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>诊断模块</title>
+    <link rel="stylesheet" type="text/css" href="css/p-style.css">
+    <link rel="stylesheet" type="text/css" href="css/layui.css">
+</head>
+<body>
+    <br>
+    <table width="100%" border="0">
+        <tr>
+            <td>
+		<div class="col-3 input-effect">
+                    <p id="dcppp1" onclick="JsInputOnChange(this.id,this.innerText);" contenteditable="true" class="effect-20" type="text" placeholder="" value=""></p>
+                    <label>肉眼所见</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+	    </td>
+        </tr>
+        <tr>
+            <td>
+		<div class="col-3 input-effect">
+                    <p id="dcppp2" onclick="JsInputOnChange(this.id,this.innerText);" contenteditable="true" class="effect-20" type="text" placeholder=""></p>
+                    <label>光镜所见</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+	    </td>
+        </tr>
+        <tr>
+            <td>
+		<div class="col-3 input-effect">
+                    <p id="dcppp3" onclick="JsInputOnChange(this.id,this.innerText);" contenteditable="true" class="effect-20" type="text" placeholder=""></p>
+                    <label>诊断意见</label>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+	    </td>
+        </tr>
+        <tr>
+            <td>
+             <div id="InputsWrapper">
+             </div>
+	    </td>
+        </tr>
+    </table>
+    <!--<div class="layui-btn-group" style="position:fixed; right:30px; bottom:10px;">
+	<button class="layui-btn layui-btn-normal">编 辑</button>
+	<button class="layui-btn"><i class="layui-icon">&#xe61d;</i> 保 存</button>
+	<button class="layui-btn layui-btn-normal">测 试</button>
+	<button class="layui-btn layui-btn-danger">我 的</button>
+	<button onclick="ZhenDuanAddContext();" class="layui-btn layui-btn-normal"><i class="layui-icon">&#xe608;</i> 添 加</button>
+    </div>-->
+
+    <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+    <script>
+        // JavaScript for label effects only
+        $(window).load(function () {
+            $(".col-3 p").text("");
+
+            $(".input-effect p").focusout(function () {
+                if ($(this).text() != "") {
+                    $(this).addClass("has-content");
+                } else {
+                    $(this).removeClass("has-content");
+                }
+            })
+        });
+    </script>
+
+    <script>
+	function ZhenDuanAddContextJS(pTitleName){
+		var FieldCount=0;
+		var x = document.getElementsByTagName("p");
+		for (var i=0;i<x.length;i++){
+			var Fie = document.getElementsByTagName("p")[i].id;
+			if("dcppp".indexOf(Fie)){
+				FieldCount++;
+			}
+		}
+		FieldCount++; //添加P输入ID自增加
+
+		var resultString="";
+		if(FieldCount<=6) //判断Input长度是否小于等于最多设置的个数  
+        	{ 
+			if(pTitleName!="")
+			{
+				$(InputsWrapper).append('<div class="col-3 input-effect"><p id="dcppp'+ FieldCount +'" contenteditable="true" class="effect-20" type="text" placeholder="" ></p><label>'+pTitleName+'</label><span class="focus-border"><i></i><span></div>');
+			}
+			else
+			{
+				$(InputsWrapper).append('<div class="col-3 input-effect"><p id="dcppp'+ FieldCount +'" contenteditable="true" class="effect-20" type="text" placeholder="" ></p><label>新增第'+FieldCount+'个输入框</label><span class="focus-border"><i></i><span></div>');
+			}
+			resultString="dcppp"+FieldCount;
+        	}
+		else
+		{
+			resultString="新增输入框大于限定数量（Error）。";
+		}
+
+		$(".input-effect p").focusout(function () {
+                    if ($(this).text() != "") {
+                        $(this).addClass("has-content");
+                    } else {
+                        $(this).removeClass("has-content");
+                    }
+		})
+		return resultString;
+	}
+    </script>
+
+
+</body>
+</html>
