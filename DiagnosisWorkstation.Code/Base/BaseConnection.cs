@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DatabaseConnection;
+﻿using DatabaseConnection;
 using DatabaseConnection.Base;
-using DatabaseConnection.Connections;
+using DatabaseConnection.Products;
 
 namespace DiagnosisWorkstation.Code.Base
 {

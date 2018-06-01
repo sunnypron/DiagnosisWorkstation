@@ -36,7 +36,7 @@
   <ItemGroup>
     <Reference Include="DCDapModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CytologyWorkstation\Sources\DCDapModel.dll</HintPath>
+      <HintPath>..\DiagnosisWorkstation\Sources\DCDapModel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
