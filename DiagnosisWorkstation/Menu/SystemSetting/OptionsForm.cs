@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DiagnosisWorkstation.Controls.Base;
 using DiagnosisWorkstation.Controls.Option;
+using DiagnosisWorkstation.Controls.Users;
 
 namespace DiagnosisWorkstation.Menu.SystemSetting
 {
@@ -45,13 +46,19 @@ namespace DiagnosisWorkstation.Menu.SystemSetting
         /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
-            m_UserControl.Save();
-
-            if (MessageBox.Show("设置完成，部分设置需要重启工作站启用，是否重新启动？", "系统提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            try
             {
-                Close();
-            }
+                m_UserControl.Save();
 
+                if (MessageBox.Show("设置完成，部分设置需要重启工作站启用，是否重新启动？", "系统提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -101,6 +108,17 @@ namespace DiagnosisWorkstation.Menu.SystemSetting
                     }
 
                     m_UserControl = new UcDataBaseCtrl
+                    {
+                        Dock = DockStyle.Fill
+                    };
+                    break;
+                case "Users":
+                    if (pnlControl.Controls.Count > 0)
+                    {
+                        pnlControl.Controls.Remove(m_UserControl);
+                    }
+
+                    m_UserControl = new UcUserPermissionCtrl
                     {
                         Dock = DockStyle.Fill
                     };

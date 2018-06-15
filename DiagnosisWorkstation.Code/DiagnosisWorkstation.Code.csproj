@@ -34,8 +34,110 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DatabaseConnection">
-      <HintPath>..\DiagnosisWorkstation\Sources\DatabaseConnection.dll</HintPath>
+    <Reference Include="AbstractFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\AbstractFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="AbstractProduct, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\AbstractProduct.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\Aspect.dll</HintPath>
+    </Reference>
+    <Reference Include="BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CaseList">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\CaseList.dll</HintPath>
+    </Reference>
+    <Reference Include="Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ConcreteFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\ConcreteFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="DatabaseConnection, Version=2.1.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DatabaseConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="DCcmdline">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCcmdline.dll</HintPath>
+    </Reference>
+    <Reference Include="DCDapFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCDapFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="DCDapModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCDapModel.dll</HintPath>
+    </Reference>
+    <Reference Include="DCDapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCDapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DcHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DcHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DCHTMUI">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCHTMUI.dll</HintPath>
+    </Reference>
+    <Reference Include="IBLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\IBLL.dll</HintPath>
+    </Reference>
+    <Reference Include="IDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\IDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageListView">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\ImageListView.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor, Version=2.5.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\ImageProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="InfoSystem">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\InfoSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniBus">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\MiniBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OracleDAL">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\OracleDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Product, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\Product.dll</HintPath>
+    </Reference>
+    <Reference Include="QpFormsControl">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\QpFormsControl.dll</HintPath>
+    </Reference>
+    <Reference Include="QpImageProcessControl">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\QpImageProcessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="QpRedStatisticsGridControl">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\QpRedStatisticsGridControl.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceGrid">
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\SourceGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLServerDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\SQLServerDAL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -48,17 +150,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseClass.cs" />
     <Compile Include="Base\BaseConnection.cs" />
+    <Compile Include="Function\UsersFunc.cs" />
     <Compile Include="Initialize\InitializeBaseData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helper\ConfigHelper.cs" />
+    <Compile Include="Tool\Calculation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Args\" />
-    <Folder Include="Function\" />
     <Folder Include="Handler\" />
     <Folder Include="Images\" />
-    <Folder Include="Tool\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DiagnosisWorkstation.ICode\DiagnosisWorkstation.ICode.csproj">

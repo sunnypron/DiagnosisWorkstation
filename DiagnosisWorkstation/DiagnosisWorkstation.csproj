@@ -36,95 +36,135 @@
   <ItemGroup>
     <Reference Include="AbstractFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\AbstractFactory.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\AbstractFactory.dll</HintPath>
     </Reference>
     <Reference Include="AbstractProduct, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\AbstractProduct.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\AbstractProduct.dll</HintPath>
     </Reference>
     <Reference Include="Aspect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\Aspect.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\Aspect.dll</HintPath>
     </Reference>
     <Reference Include="BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\BLL.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\BLL.dll</HintPath>
     </Reference>
     <Reference Include="CaseList, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\CaseList.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\CaseList.dll</HintPath>
     </Reference>
     <Reference Include="Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\Client.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\Client.dll</HintPath>
     </Reference>
     <Reference Include="ConcreteFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\ConcreteFactory.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\ConcreteFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="DatabaseConnection, Version=2.1.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DatabaseConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="DCcmdline, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCcmdline.dll</HintPath>
     </Reference>
     <Reference Include="DCDapFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DCDapFactory.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCDapFactory.dll</HintPath>
     </Reference>
     <Reference Include="DCDapModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DCDapModel.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCDapModel.dll</HintPath>
     </Reference>
     <Reference Include="DCDapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DCDapper.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCDapper.dll</HintPath>
     </Reference>
     <Reference Include="DcHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DcHelper.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DcHelper.dll</HintPath>
     </Reference>
     <Reference Include="DCHTMUI, Version=1.4.3.30081, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\DCHTMUI.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DCHTMUI.dll</HintPath>
+    </Reference>
+    <Reference Include="DiagnosisWorkstation.Code">
+      <HintPath>..\DiagnosisWorkstation.Code\bin\Debug\DiagnosisWorkstation.Code.dll</HintPath>
+    </Reference>
+    <Reference Include="DiagnosisWorkstation.Controls">
+      <HintPath>..\DiagnosisWorkstation.Controls\bin\Debug\DiagnosisWorkstation.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="DiagnosisWorkstation.ICode">
+      <HintPath>..\DiagnosisWorkstation.ICode\bin\Debug\DiagnosisWorkstation.ICode.dll</HintPath>
+    </Reference>
+    <Reference Include="DiagnosisWorkstation.Model">
+      <HintPath>..\DiagnosisWorkstation.Model\bin\Debug\DiagnosisWorkstation.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectShowLib-2005, Version=2.0.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\DirectShowLib-2005.dll</HintPath>
     </Reference>
     <Reference Include="IBLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\IBLL.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\IBLL.dll</HintPath>
     </Reference>
     <Reference Include="IDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\IDAL.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\IDAL.dll</HintPath>
     </Reference>
     <Reference Include="ImageListView, Version=11.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\ImageListView.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\ImageListView.dll</HintPath>
     </Reference>
     <Reference Include="ImageProcessor, Version=2.5.4.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\ImageProcessor.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\ImageProcessor.dll</HintPath>
     </Reference>
     <Reference Include="InfoSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\InfoSystem.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\InfoSystem.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\log4net.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniBus, Version=0.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\MiniBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OracleDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\OracleDAL.dll</HintPath>
     </Reference>
     <Reference Include="Product, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\Product.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\Product.dll</HintPath>
     </Reference>
     <Reference Include="QpFormsControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\QpFormsControl.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\QpFormsControl.dll</HintPath>
     </Reference>
     <Reference Include="QpImageProcessControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\QpImageProcessControl.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\QpImageProcessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="QpRedStatisticsGridControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\QpRedStatisticsGridControl.dll</HintPath>
     </Reference>
     <Reference Include="SourceGrid, Version=4.40.6611.31175, Culture=neutral, PublicKeyToken=df6f5e538749e85d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\SourceGrid.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\SourceGrid.dll</HintPath>
     </Reference>
     <Reference Include="SQLServerDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CytologyWorkstation\CytologyWorkstation\Sources\SQLServerDAL.dll</HintPath>
+      <HintPath>C:\Users\sunny\source\repos\WindowsFormsApp4\Sources\SQLServerDAL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -177,6 +217,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Sources\App.config" />
+    <None Include="Sources\ImageListView.dll.config" />
     <None Include="Sources\log4net.config" />
     <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\cef.pak" />
     <None Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\Resources\cef_100_percent.pak" />
@@ -308,6 +350,8 @@
     <Content Include="Sources\AForge\AForge.Math.dll" />
     <Content Include="Sources\AForge\AForge.Video.DirectShow.dll" />
     <Content Include="Sources\AForge\AForge.Video.dll" />
+    <Content Include="Sources\apidsp_windows.dll" />
+    <Content Include="Sources\apidsp_windows_x64.dll" />
     <Content Include="Sources\Aspect.dll" />
     <Content Include="Sources\BLL.dll" />
     <Content Include="Sources\CaseList.dll" />
@@ -315,6 +359,7 @@
     <Content Include="Sources\commInterface.dll" />
     <Content Include="Sources\ConcreteFactory.dll" />
     <Content Include="Sources\DatabaseConnection.dll" />
+    <Content Include="Sources\DCcmdline.dll" />
     <Content Include="Sources\DCDapFactory.dll" />
     <Content Include="Sources\DCDapModel.dll" />
     <Content Include="Sources\DCDapper.dll" />
@@ -326,19 +371,25 @@
     <Content Include="Sources\FastReport\FastReport.Editor.dll" />
     <Content Include="Sources\Files\Newtonsoft.Json.xml" />
     <Content Include="Sources\Files\ReportType.txt" />
+    <Content Include="Sources\hasp_net_windows.dll" />
+    <Content Include="Sources\hasp_windows_103839.dll" />
+    <Content Include="Sources\hasp_windows_demo.dll" />
+    <Content Include="Sources\hasp_windows_x64_demo.dll" />
+    <Content Include="Sources\HisInterface.dll" />
     <Content Include="Sources\IBLL.dll" />
     <Content Include="Sources\IDAL.dll" />
     <Content Include="Sources\ImageListView.dll" />
     <Content Include="Sources\ImageProcessor.dll" />
     <Content Include="Sources\InfoSystem.dll" />
     <Content Include="Sources\log4net.dll" />
-    <Content Include="Sources\MySql.Data.dll" />
+    <Content Include="Sources\MiniBus.dll" />
     <Content Include="Sources\Newtonsoft.Json.dll" />
     <Content Include="Sources\Newtonsoft.Json.xml" />
     <Content Include="Sources\OracleDAL.dll" />
     <Content Include="Sources\Product.dll" />
     <Content Include="Sources\QpFormsControl.dll" />
     <Content Include="Sources\QpImageProcessControl.dll" />
+    <Content Include="Sources\QpRedStatisticsGridControl.dll" />
     <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\d3dcompiler_43.dll" />
     <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\d3dcompiler_47.dll" />
     <Content Include="Sources\QPStudio\DCHTMUI\fx\3.2526.1373\x64\libcef.dll" />
@@ -698,24 +749,6 @@
     <Folder Include="Sources\WebUI\Slides\earth_files\" />
     <Folder Include="Specimen\" />
     <Folder Include="Tool\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DiagnosisWorkstation.Code\DiagnosisWorkstation.Code.csproj">
-      <Project>{011f3cc7-7424-4a1e-98c8-6aef69108f79}</Project>
-      <Name>DiagnosisWorkstation.Code</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DiagnosisWorkstation.Controls\DiagnosisWorkstation.Controls.csproj">
-      <Project>{5a49a518-3fe5-4288-a65c-b5ccbe5a3a3e}</Project>
-      <Name>DiagnosisWorkstation.Controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DiagnosisWorkstation.ICode\DiagnosisWorkstation.ICode.csproj">
-      <Project>{d48a9df0-03bd-4a7c-b66c-5bbb980eb99c}</Project>
-      <Name>DiagnosisWorkstation.ICode</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DiagnosisWorkstation.Model\DiagnosisWorkstation.Model.csproj">
-      <Project>{174e737d-bf88-45d9-a587-79e308d78e4e}</Project>
-      <Name>DiagnosisWorkstation.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,12 +8,15 @@ using System.Drawing.Printing;
 #endregion
 #region 框架
 using QpFormsControl;
+using IBLL;
+using BLL;
 #endregion
 #region 程序集
 using DiagnosisWorkstation.Model;
 using DiagnosisWorkstation.Menu.SystemSetting;
 using DiagnosisWorkstation.Code.Helper;
 using DiagnosisWorkstation.Code.Initialize;
+using DiagnosisWorkstation.ICode.Initialize;
 #endregion
 
 namespace DiagnosisWorkstation
@@ -25,8 +28,10 @@ namespace DiagnosisWorkstation
         CaseList.UserControl1 m_CaseInfoCtrl;
         QpDengJiCtrl m_RegistedCtrl;
 
-        InitializeData m_IniData = new InitializeData();
+        IInitializeData m_IniData = new InitializeData();
+        ICRUDBLL m_CrudBll = new CRUDBLL();
         ConfigHelper m_Tool = new ConfigHelper();
+        
 
         Thread m_MainThread;
         #endregion
@@ -85,7 +90,7 @@ namespace DiagnosisWorkstation
             m_RegistedCtrl.SplashBackColor = Color.Transparent;
             m_RegistedCtrl.SplashImage = null;
             m_RegistedCtrl.SplashImageLayout = ImageLayout.Tile;
-            //m_RegistedCtrl.IsSelect2Data = true;
+            m_RegistedCtrl.IsSelect2Data = true;
             m_RegistedCtrl.IsTagging = true;
 
             tpRegisterPage.Controls.Add(m_RegistedCtrl);

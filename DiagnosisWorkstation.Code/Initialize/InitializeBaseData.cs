@@ -1,9 +1,10 @@
 ﻿using System;
 using DiagnosisWorkstation.Model;
+using DiagnosisWorkstation.ICode.Initialize;
 
 namespace DiagnosisWorkstation.Code.Initialize
 {
-    public class InitializeData
+    public class InitializeData : IInitializeData
     {
         /// <summary>
         /// 绑定基础数据
