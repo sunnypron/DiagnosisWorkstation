@@ -152,6 +152,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseClass.cs" />
     <Compile Include="Base\BaseConnection.cs" />
+    <Compile Include="Function\SimpleFactory.cs" />
     <Compile Include="Function\UsersFunc.cs" />
     <Compile Include="Initialize\InitializeBaseData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

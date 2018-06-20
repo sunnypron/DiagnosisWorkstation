@@ -29,10 +29,8 @@ namespace DiagnosisWorkstation
         QpDengJiCtrl m_RegistedCtrl;
 
         IInitializeData m_IniData = new InitializeData();
-        ICRUDBLL m_CrudBll = new CRUDBLL();
         ConfigHelper m_Tool = new ConfigHelper();
         
-
         Thread m_MainThread;
         #endregion
 

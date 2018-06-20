@@ -1,4 +1,5 @@
-﻿using DiagnosisWorkstation.ICode.Helper;
+﻿using System;
+using DiagnosisWorkstation.ICode.Helper;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace DiagnosisWorkstation.Code.Helper
     /// </summary>
     public class ConfigHelper : IConfigHelper
     {
-        private string m_ConfigFilePath = "";
+        private readonly string m_ConfigFilePath = "";
 
         public ConfigHelper()
         {
@@ -33,11 +34,14 @@ namespace DiagnosisWorkstation.Code.Helper
             switch (db)
             {
                 case DataBase.SqlServer:
-                    string sqlConn = string.Format("Data Source={0};Initial Catalog={1};User Name={2};Password={3};Connect Timeout=20;", serviceName, dbName, uid, pwd);
+                    var sqlConn =
+                        $"Data Source={serviceName};Initial Catalog={dbName};User ID={uid};Password={pwd};Connect Timeout=20;";
                     WriteConnStr(key, sqlConn, "System.Data.SqlClient");
                     break;
                 case DataBase.Oracle:
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(db), db, null);
             }
         }
 
@@ -45,21 +49,16 @@ namespace DiagnosisWorkstation.Code.Helper
         /// 将数据库连接转入字典
         /// </summary>
         /// <param name="key"></param>
-        /// <param name="provider"></param>
         /// <returns></returns>
         public Dictionary<string, string> ReadConnToDict(string key)
         {
-            string
-                provider = "",
-                connStr = "";
+            var connStr = ReadConnStr(key, out var provider);
 
-            connStr = ReadConnStr(key, out provider);
-
-            Dictionary<string, string> connDict = new Dictionary<string, string>();
+            var connDict = new Dictionary<string, string>();
 
             if (!string.IsNullOrEmpty(provider))
             {
-                string[] providerArray = provider.Split('.');
+                var providerArray = provider.Split('.');
                 connDict.Add("provider", providerArray.Last());
             }
 
@@ -84,20 +83,18 @@ namespace DiagnosisWorkstation.Code.Helper
         #endregion
 
         #region 读写配置文件
+
         /// <summary>
         /// 修改连接字符串
         /// </summary>
         /// <param name="key">连接字符串名称</param>
         /// <param name="connStr">要修改的连接字符串</param>
+        /// <param name="provider">數據庫連接驅動</param>
         private void WriteConnStr(string key, string connStr, string provider)
         {
-            Configuration config = ConfigurationManager.OpenExeConfiguration(m_ConfigFilePath);
+            var config = ConfigurationManager.OpenExeConfiguration(m_ConfigFilePath);
 
-            bool exist = false;
-            if (ConfigurationManager.ConnectionStrings[key] != null)
-            {
-                exist = true;
-            }
+            var exist = ConfigurationManager.ConnectionStrings[key] != null;
 
             if (exist)
             {
@@ -116,25 +113,21 @@ namespace DiagnosisWorkstation.Code.Helper
         /// 读取连接字符串
         /// </summary>
         /// <param name="key">连接字符串名称</param>
+        /// <param name="provider">數據庫連接驅動</param>
         private string ReadConnStr(string key, out string provider)
         {
-            Configuration config = ConfigurationManager.OpenExeConfiguration(m_ConfigFilePath);
+            var config = ConfigurationManager.OpenExeConfiguration(m_ConfigFilePath);
 
-            string
+            var
                 connStr = "";
             provider = "";
 
-            bool exist = false;
-            if (ConfigurationManager.ConnectionStrings[key] != null)
-            {
-                exist = true;
-            }
+            var exist = ConfigurationManager.ConnectionStrings[key] != null;
 
-            if (exist)
-            {
-                connStr = config.ConnectionStrings.ConnectionStrings[key].ConnectionString;
-                provider = config.ConnectionStrings.ConnectionStrings[key].ProviderName;
-            }
+            if (!exist) return connStr;
+
+            connStr = config.ConnectionStrings.ConnectionStrings[key].ConnectionString;
+            provider = config.ConnectionStrings.ConnectionStrings[key].ProviderName;
 
             return connStr;
         }
@@ -178,26 +171,11 @@ namespace DiagnosisWorkstation.Code.Helper
         /// <returns></returns>
         public string GetAppConfig(string key)
         {
-            Configuration config = ConfigurationManager.OpenExeConfiguration(m_ConfigFilePath);
+            var config = ConfigurationManager.OpenExeConfiguration(m_ConfigFilePath);
 
-            bool exist = false;
-            foreach (string k in config.AppSettings.Settings.AllKeys)
-            {
-                if (k == key)
-                {
-                    exist = true;
-                    break;
-                }
-            }
+            var exist = config.AppSettings.Settings.AllKeys.Any(k => k == key);
 
-            if (exist)
-            {
-                return config.AppSettings.Settings[key].Value;
-            }
-            else
-            {
-                return "";
-            }
+            return exist ? config.AppSettings.Settings[key].Value : "";
         }
         #endregion
     }

@@ -50,6 +50,8 @@
             this.pnlRole = new System.Windows.Forms.Label();
             this.pnlRoleContent = new System.Windows.Forms.Panel();
             this.cbRole = new System.Windows.Forms.ComboBox();
+            this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
+            this.btnCreateNew = new System.Windows.Forms.Button();
             this.tlpSettings.SuspendLayout();
             this.tlpUserInfo.SuspendLayout();
             this.pnlCodeLabel.SuspendLayout();
@@ -62,6 +64,7 @@
             this.pnlConfirmPwd.SuspendLayout();
             this.pnlRoleLabel.SuspendLayout();
             this.pnlRoleContent.SuspendLayout();
+            this.tlpButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpSettings
@@ -94,16 +97,18 @@
             this.tlpUserInfo.Controls.Add(this.pnlConfirmPwd, 1, 3);
             this.tlpUserInfo.Controls.Add(this.pnlRoleLabel, 0, 4);
             this.tlpUserInfo.Controls.Add(this.pnlRoleContent, 1, 4);
+            this.tlpUserInfo.Controls.Add(this.tlpButtons, 1, 5);
             this.tlpUserInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpUserInfo.Location = new System.Drawing.Point(3, 3);
             this.tlpUserInfo.Name = "tlpUserInfo";
-            this.tlpUserInfo.RowCount = 6;
-            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.862069F));
-            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.862069F));
-            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.862069F));
-            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.034483F));
-            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.862069F));
-            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.51724F));
+            this.tlpUserInfo.RowCount = 7;
+            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tlpUserInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpUserInfo.Size = new System.Drawing.Size(897, 580);
             this.tlpUserInfo.TabIndex = 1;
             // 
@@ -113,7 +118,7 @@
             this.pnlCodeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCodeLabel.Location = new System.Drawing.Point(3, 3);
             this.pnlCodeLabel.Name = "pnlCodeLabel";
-            this.pnlCodeLabel.Size = new System.Drawing.Size(83, 28);
+            this.pnlCodeLabel.Size = new System.Drawing.Size(83, 29);
             this.pnlCodeLabel.TabIndex = 0;
             // 
             // lblUserCode
@@ -131,7 +136,7 @@
             this.pnlCodeContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCodeContent.Location = new System.Drawing.Point(92, 3);
             this.pnlCodeContent.Name = "pnlCodeContent";
-            this.pnlCodeContent.Size = new System.Drawing.Size(802, 28);
+            this.pnlCodeContent.Size = new System.Drawing.Size(802, 29);
             this.pnlCodeContent.TabIndex = 1;
             // 
             // txtUserCode
@@ -146,9 +151,9 @@
             // 
             this.pnlNameLabel.Controls.Add(this.lblUserName);
             this.pnlNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlNameLabel.Location = new System.Drawing.Point(3, 37);
+            this.pnlNameLabel.Location = new System.Drawing.Point(3, 38);
             this.pnlNameLabel.Name = "pnlNameLabel";
-            this.pnlNameLabel.Size = new System.Drawing.Size(83, 28);
+            this.pnlNameLabel.Size = new System.Drawing.Size(83, 29);
             this.pnlNameLabel.TabIndex = 2;
             // 
             // lblUserName
@@ -164,9 +169,9 @@
             // 
             this.pnlNameContent.Controls.Add(this.txtUserName);
             this.pnlNameContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlNameContent.Location = new System.Drawing.Point(92, 37);
+            this.pnlNameContent.Location = new System.Drawing.Point(92, 38);
             this.pnlNameContent.Name = "pnlNameContent";
-            this.pnlNameContent.Size = new System.Drawing.Size(802, 28);
+            this.pnlNameContent.Size = new System.Drawing.Size(802, 29);
             this.pnlNameContent.TabIndex = 3;
             // 
             // txtUserName
@@ -181,9 +186,9 @@
             // 
             this.pnlPwdLabel.Controls.Add(this.lblPwd);
             this.pnlPwdLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPwdLabel.Location = new System.Drawing.Point(3, 71);
+            this.pnlPwdLabel.Location = new System.Drawing.Point(3, 73);
             this.pnlPwdLabel.Name = "pnlPwdLabel";
-            this.pnlPwdLabel.Size = new System.Drawing.Size(83, 28);
+            this.pnlPwdLabel.Size = new System.Drawing.Size(83, 29);
             this.pnlPwdLabel.TabIndex = 4;
             // 
             // lblPwd
@@ -199,9 +204,9 @@
             // 
             this.pnlPwdContent.Controls.Add(this.txtPwd);
             this.pnlPwdContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPwdContent.Location = new System.Drawing.Point(92, 71);
+            this.pnlPwdContent.Location = new System.Drawing.Point(92, 73);
             this.pnlPwdContent.Name = "pnlPwdContent";
-            this.pnlPwdContent.Size = new System.Drawing.Size(802, 28);
+            this.pnlPwdContent.Size = new System.Drawing.Size(802, 29);
             this.pnlPwdContent.TabIndex = 5;
             // 
             // txtPwd
@@ -217,7 +222,7 @@
             // 
             this.pnlConfirmLabel.Controls.Add(this.lblConfirmPwd);
             this.pnlConfirmLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlConfirmLabel.Location = new System.Drawing.Point(3, 105);
+            this.pnlConfirmLabel.Location = new System.Drawing.Point(3, 108);
             this.pnlConfirmLabel.Name = "pnlConfirmLabel";
             this.pnlConfirmLabel.Size = new System.Drawing.Size(83, 29);
             this.pnlConfirmLabel.TabIndex = 6;
@@ -235,7 +240,7 @@
             // 
             this.pnlConfirmPwd.Controls.Add(this.txtConfirmPwd);
             this.pnlConfirmPwd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlConfirmPwd.Location = new System.Drawing.Point(92, 105);
+            this.pnlConfirmPwd.Location = new System.Drawing.Point(92, 108);
             this.pnlConfirmPwd.Name = "pnlConfirmPwd";
             this.pnlConfirmPwd.Size = new System.Drawing.Size(802, 29);
             this.pnlConfirmPwd.TabIndex = 7;
@@ -252,9 +257,9 @@
             // 
             this.pnlRoleLabel.Controls.Add(this.pnlRole);
             this.pnlRoleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRoleLabel.Location = new System.Drawing.Point(3, 140);
+            this.pnlRoleLabel.Location = new System.Drawing.Point(3, 143);
             this.pnlRoleLabel.Name = "pnlRoleLabel";
-            this.pnlRoleLabel.Size = new System.Drawing.Size(83, 28);
+            this.pnlRoleLabel.Size = new System.Drawing.Size(83, 29);
             this.pnlRoleLabel.TabIndex = 8;
             // 
             // pnlRole
@@ -270,9 +275,9 @@
             // 
             this.pnlRoleContent.Controls.Add(this.cbRole);
             this.pnlRoleContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRoleContent.Location = new System.Drawing.Point(92, 140);
+            this.pnlRoleContent.Location = new System.Drawing.Point(92, 143);
             this.pnlRoleContent.Name = "pnlRoleContent";
-            this.pnlRoleContent.Size = new System.Drawing.Size(802, 28);
+            this.pnlRoleContent.Size = new System.Drawing.Size(802, 29);
             this.pnlRoleContent.TabIndex = 9;
             // 
             // cbRole
@@ -283,6 +288,31 @@
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(802, 22);
             this.cbRole.TabIndex = 0;
+            // 
+            // tlpButtons
+            // 
+            this.tlpButtons.ColumnCount = 2;
+            this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tlpButtons.Controls.Add(this.btnCreateNew, 1, 0);
+            this.tlpButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpButtons.Location = new System.Drawing.Point(92, 178);
+            this.tlpButtons.Name = "tlpButtons";
+            this.tlpButtons.RowCount = 1;
+            this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpButtons.Size = new System.Drawing.Size(802, 29);
+            this.tlpButtons.TabIndex = 10;
+            // 
+            // btnCreateNew
+            // 
+            this.btnCreateNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCreateNew.Location = new System.Drawing.Point(723, 3);
+            this.btnCreateNew.Name = "btnCreateNew";
+            this.btnCreateNew.Size = new System.Drawing.Size(76, 23);
+            this.btnCreateNew.TabIndex = 0;
+            this.btnCreateNew.Text = "新建";
+            this.btnCreateNew.UseVisualStyleBackColor = true;
+            this.btnCreateNew.Click += new System.EventHandler(this.btnCreateNew_Click);
             // 
             // UcUserInfoCtrl
             // 
@@ -313,6 +343,7 @@
             this.pnlRoleLabel.ResumeLayout(false);
             this.pnlRoleLabel.PerformLayout();
             this.pnlRoleContent.ResumeLayout(false);
+            this.tlpButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -341,5 +372,7 @@
         private System.Windows.Forms.Panel pnlRoleContent;
         private System.Windows.Forms.Label pnlRole;
         private System.Windows.Forms.ComboBox cbRole;
+        private System.Windows.Forms.Button btnCreateNew;
+        private System.Windows.Forms.TableLayoutPanel tlpButtons;
     }
 }

@@ -299,6 +299,7 @@
             this.cbDbType.Name = "cbDbType";
             this.cbDbType.Size = new System.Drawing.Size(626, 22);
             this.cbDbType.TabIndex = 0;
+            this.cbDbType.SelectionChangeCommitted += new System.EventHandler(this.cbDbType_SelectionChangeCommitted);
             // 
             // tlpServiceName
             // 

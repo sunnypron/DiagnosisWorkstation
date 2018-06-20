@@ -9,5 +9,6 @@ namespace DiagnosisWorkstation.Code.Base
 {
     public class BaseClass
     {
+        internal ICRUDBLL m_CrudBll = new CRUDBLL();
     }
 }

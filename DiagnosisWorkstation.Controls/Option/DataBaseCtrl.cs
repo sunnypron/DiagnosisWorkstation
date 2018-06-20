@@ -8,13 +8,16 @@ using System.Text;
 using System.Windows.Forms;
 using DiagnosisWorkstation.Controls.Base;
 using DiagnosisWorkstation.Code.Helper;
+using DiagnosisWorkstation.Code.Function;
 using DiagnosisWorkstation.ICode.Helper;
+using DiagnosisWorkstation.ICode.Function;
 
 namespace DiagnosisWorkstation.Controls.Option
 {
     public partial class UcDataBaseCtrl : BaseConfigCtrl
     {
         IConfigHelper m_Tool = new ConfigHelper();
+        ISimpleFactory m_SimpleFactory = new SimpleFactory();
 
         public UcDataBaseCtrl()
         {
@@ -60,6 +63,11 @@ namespace DiagnosisWorkstation.Controls.Option
                 txtIniFileName.Enabled = true;
             }
         }
+
+        private void cbDbType_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            m_SimpleFactory.SetConsoleDAL(cbDbType.SelectedItem.ToString());
+        }
         #endregion
 
         #region 函数
@@ -97,6 +105,7 @@ namespace DiagnosisWorkstation.Controls.Option
             if (type == "内部")
             {
                 m_Tool.SetAppConfig("dbLinkType", "Inside");
+                m_Tool.SetAppConfig("iniFname", "");
             }
             else if (type == "外部")
             {
@@ -151,9 +160,9 @@ namespace DiagnosisWorkstation.Controls.Option
                 txtDbName.Text = connDict["Initial Catalog"].ToString();
             }
 
-            if (connDict.ContainsKey("User Name"))
+            if (connDict.ContainsKey("User ID"))
             {
-                txtUserName.Text = connDict["User Name"].ToString();
+                txtUserName.Text = connDict["User ID"].ToString();
             }
 
             if (connDict.ContainsKey("Password"))

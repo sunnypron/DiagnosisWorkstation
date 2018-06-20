@@ -4,8 +4,13 @@ using DatabaseConnection.Products;
 
 namespace DiagnosisWorkstation.Code.Base
 {
-    internal class BaseConnection
+    public class BaseConnection
     {
-        SqlServerHelper conn = (SqlServerHelper)new GetDbConn().GetDbConnClass(DBType.SqlServer);
+        internal SqlServerHelper conn = (SqlServerHelper)new GetDbConn().GetDbConnClass(DBType.SqlServer);
+        
+        public BaseConnection()
+        {
+            conn.SetConnKey = "Database";
+        }
     }
 }
