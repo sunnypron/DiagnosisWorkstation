@@ -50,14 +50,14 @@ namespace DiagnosisWorkstation.Menu.SystemSetting
             {
                 m_UserControl.Save();
 
-                if (MessageBox.Show("设置完成，部分设置需要重启工作站启用，是否重新启动？", "系统提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                if (MessageBox.Show(@"设置完成，部分设置需要重启工作站启用，是否重新启动？", @"系统提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
                     Close();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, @"错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -1,23 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using DiagnosisWorkstation.Controls.Base;
-using DiagnosisWorkstation.Code.Helper;
 using DiagnosisWorkstation.Code.Function;
-using DiagnosisWorkstation.ICode.Helper;
+using DiagnosisWorkstation.Code.Helper;
+using DiagnosisWorkstation.Controls.Base;
 using DiagnosisWorkstation.ICode.Function;
+using DiagnosisWorkstation.ICode.Helper;
 
 namespace DiagnosisWorkstation.Controls.Option
 {
     public partial class UcDataBaseCtrl : BaseConfigCtrl
     {
-        IConfigHelper m_Tool = new ConfigHelper();
-        ISimpleFactory m_SimpleFactory = new SimpleFactory();
+        private readonly IConfigHelper _tool = new ConfigHelper();
+        private readonly ISimpleFactory _simpleFactory = new SimpleFactory();
 
         public UcDataBaseCtrl()
         {
@@ -32,16 +27,9 @@ namespace DiagnosisWorkstation.Controls.Option
         /// <param name="e"></param>
         private void cbShowPwd_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox cb = (CheckBox)sender;
+            var cb = (CheckBox)sender;
 
-            if (cb.Checked)
-            {
-                txtPwd.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPwd.UseSystemPasswordChar = true;
-            }
+            txtPwd.UseSystemPasswordChar = !cb.Checked;
         }
 
         /// <summary>
@@ -51,76 +39,75 @@ namespace DiagnosisWorkstation.Controls.Option
         /// <param name="e"></param>
         private void cbDbLinkType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox cb = (ComboBox)sender;
-            string txt = cb.SelectedItem.ToString();
+            var cb = (ComboBox)sender;
+            var txt = cb.SelectedItem.ToString();
 
-            if (txt == "内部")
+            switch (txt)
             {
-                txtIniFileName.Enabled = false;
-            }
-            else if (txt == "外部")
-            {
-                txtIniFileName.Enabled = true;
+                case "内部":
+                    txtIniFileName.Enabled = false;
+                    break;
+                case "外部":
+                    txtIniFileName.Enabled = true;
+                    break;
             }
         }
 
         private void cbDbType_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            m_SimpleFactory.SetConsoleDAL(cbDbType.SelectedItem.ToString());
+            _simpleFactory.SetConsoleDAL(cbDbType.SelectedItem.ToString());
         }
         #endregion
 
         #region 函数
+        /// <summary>
+        /// 保存
+        /// </summary>
         public override void Save()
         {
             if (string.IsNullOrEmpty(txtServiceName.Text.Trim()))
             {
-                MessageBox.Show("服务器名不能为空", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"服务器名不能为空", @"系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else if (string.IsNullOrEmpty(txtDbName.Text.Trim()))
+            if (string.IsNullOrEmpty(txtDbName.Text.Trim()))
             {
-                MessageBox.Show("数据库名不能为空", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"数据库名不能为空", @"系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else if (string.IsNullOrEmpty(txtUserName.Text.Trim()))
+            if (string.IsNullOrEmpty(txtUserName.Text.Trim()))
             {
-                MessageBox.Show("用户名不能为空", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"用户名不能为空", @"系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else if (string.IsNullOrEmpty(txtPwd.Text.Trim()))
+            if (string.IsNullOrEmpty(txtPwd.Text.Trim()))
             {
-                MessageBox.Show("密码不能为空", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"密码不能为空", @"系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string serviceName = txtServiceName.Text.Trim();
-            string dbName = txtDbName.Text.Trim();
-            string uid = txtUserName.Text.Trim();
-            string pwd = txtPwd.Text.Trim();
+            var serviceName = txtServiceName.Text.Trim();
+            var dbName = txtDbName.Text.Trim();
+            var uid = txtUserName.Text.Trim();
+            var pwd = txtPwd.Text.Trim();
 
-            m_Tool.SetConnConfig("Database", DataBase.SqlServer, serviceName, dbName, uid, pwd);
+            _tool.SetConnConfig("Database", DataBase.SqlServer, serviceName, dbName, uid, pwd);
 
-            string type = cbDbLinkType.Text;
-            if (type == "内部")
+            var type = cbDbLinkType.Text;
+            switch (type)
             {
-                m_Tool.SetAppConfig("dbLinkType", "Inside");
-                m_Tool.SetAppConfig("iniFname", "");
-            }
-            else if (type == "外部")
-            {
-
-                if (txtIniFileName.Text.Trim() == "")
-                {
-                    MessageBox.Show("请输入INI配置文件名", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                case "内部":
+                    _tool.SetAppConfig("dbLinkType", "Inside");
+                    _tool.SetAppConfig("iniFname", "");
+                    break;
+                case "外部" when txtIniFileName.Text.Trim() == "":
+                    MessageBox.Show(@"请输入INI配置文件名", @"系统提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
-                }
-                else
-                {
-                    string name = txtIniFileName.Text.Trim();
-                    m_Tool.SetAppConfig("dbLinkType", "Outside");
-                    m_Tool.SetAppConfig("iniFname", name);
-                }
+                case "外部":
+                    var name = txtIniFileName.Text.Trim();
+                    _tool.SetAppConfig("dbLinkType", "Outside");
+                    _tool.SetAppConfig("iniFname", name);
+                    break;
             }
         }
 
@@ -129,56 +116,58 @@ namespace DiagnosisWorkstation.Controls.Option
         /// </summary>
         public override void ReadConfig()
         {
-            Dictionary<string, string> connDict = m_Tool.ReadConnToDict("Database");
+            Dictionary<string, string> connDict = _tool.ReadConnToDict("Database");
             if (connDict.Count == 0)
             {
                 return;
             }
 
-            string val = "";
             if (connDict.ContainsKey("provider"))
             {
-                val = connDict["provider"].ToString();
+                var val = connDict["provider"];
 
-                if (val == "SqlClient")
+                switch (val)
                 {
-                    cbDbType.Text = "SQLServer";
-                }
-                else if (val == "Oracle" || val == "odbc")
-                {
-                    cbDbType.Text = "Oracle";
+                    case "SqlClient":
+                        cbDbType.Text = @"SQLServer";
+                        break;
+                    case "Oracle":
+                    case "odbc":
+                        cbDbType.Text = @"Oracle";
+                        break;
                 }
             }
 
             if (connDict.ContainsKey("Data Source"))
             {
-                txtServiceName.Text = connDict["Data Source"].ToString();
+                txtServiceName.Text = connDict["Data Source"];
             }
 
             if (connDict.ContainsKey("Initial Catalog"))
             {
-                txtDbName.Text = connDict["Initial Catalog"].ToString();
+                txtDbName.Text = connDict["Initial Catalog"];
             }
 
             if (connDict.ContainsKey("User ID"))
             {
-                txtUserName.Text = connDict["User ID"].ToString();
+                txtUserName.Text = connDict["User ID"];
             }
 
             if (connDict.ContainsKey("Password"))
             {
-                txtPwd.Text = connDict["Password"].ToString();
+                txtPwd.Text = connDict["Password"];
             }
 
-            string linkType = m_Tool.GetAppConfig("dbLinkType");
-            if (linkType == "Inside")
+            var linkType = _tool.GetAppConfig("dbLinkType");
+            switch (linkType)
             {
-                cbDbLinkType.Text = "内部";
-            }
-            else if (linkType == "Outside")
-            {
-                cbDbLinkType.Text = "外部";
-                txtIniFileName.Text = m_Tool.GetAppConfig("iniFname");
+                case "Inside":
+                    cbDbLinkType.Text = @"内部";
+                    break;
+                case "Outside":
+                    cbDbLinkType.Text = @"外部";
+                    txtIniFileName.Text = _tool.GetAppConfig("iniFname");
+                    break;
             }
         }
         #endregion

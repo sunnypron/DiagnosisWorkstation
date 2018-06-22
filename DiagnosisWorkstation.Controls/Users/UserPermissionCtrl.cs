@@ -3,51 +3,83 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
 using DiagnosisWorkstation.Controls.Base;
-using DiagnosisWorkstation.ICode.Function;
-using DiagnosisWorkstation.Code.Function;
+using DiagnosisWorkstation.ICode.BLL;
+using DiagnosisWorkstation.Code.BLL;
 using DCDapModel;
 
 namespace DiagnosisWorkstation.Controls.Users
 {
     public partial class UcUserPermissionCtrl : BaseConfigCtrl
     {
-        private BaseConfigCtrl m_UserContrl;
-        private IUsersFunc m_UserFunc = new UsersFunc();
-        private List<UserUser> m_Users = new List<UserUser>();
+        private BaseConfigCtrl _userContrl;
+        private readonly IUsersBll _usersBll = new UsersBll();
+        private List<UserUser> _users = new List<UserUser>();
 
         public UcUserPermissionCtrl()
         {
             InitializeComponent();
-
         }
 
         public override void Save()
         {
-            m_UserContrl?.Save();
+            _userContrl?.Save();
         }
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
             var rb = (RadioButton)sender;
 
-            var name = rb.Name;
-            if (name == "rbUserInfo")
+            if (pnlInfo.Controls.Count > 0)
             {
-                m_UserContrl = new UcUserInfoCtrl()
-                {
-                    Dock = DockStyle.Fill
-                };
-
-
-
-                m_Users = m_UserFunc.GetUsers();
-                if (m_Users.Count > 0)
-                {
-                    BindUserList(m_Users);
-                }
+                pnlInfo.Controls.Remove(_userContrl);
             }
 
-            pnlInfo.Controls.Add(m_UserContrl);
+            // ReSharper disable once RedundantCheckBeforeAssignment
+            if (_userContrl != null)
+            {
+                _userContrl = null;
+            }
+
+            var name = rb.Name;
+            switch (name)
+            {
+                case "rbUserInfo":
+                    _userContrl = new UcUserInfoCtrl()
+                    {
+                        Dock = DockStyle.Fill
+                    };
+
+
+
+                    _users = _usersBll.GetUsers();
+                    if (_users.Count > 0)
+                    {
+                        BindUserList(_users);
+                    }
+
+                    break;
+                case "rbRoleInfo":
+                    break;
+                case "rbPermissionInfo":
+                    break;
+            }
+
+            if (_userContrl == null) return;
+
+            pnlInfo.Controls.Add(_userContrl);
+
+            _userContrl.ReadConfig();
+        }
+
+        private void lbList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbList.SelectedIndex == -1) return;
+
+            OperationType = OperationType.Modify;
+
+            var userId = lbList.SelectedValue.ToString();
+
+            _userContrl.ShowInfo(userId);
         }
 
         #region 函数

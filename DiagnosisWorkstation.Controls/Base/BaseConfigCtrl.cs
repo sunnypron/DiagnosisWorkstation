@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using BLL;
+using IBLL;
 
 namespace DiagnosisWorkstation.Controls.Base
 {
+    public enum OperationType
+    {
+        Create = 0,
+        Modify = 1
+    }
+
     public partial class BaseConfigCtrl : UserControl
     {
+        /// <summary>
+        /// 操作類型
+        /// </summary>
+        public static OperationType OperationType { get; set; }
+
         public BaseConfigCtrl()
         {
             InitializeComponent();
@@ -22,6 +28,11 @@ namespace DiagnosisWorkstation.Controls.Base
         }
 
         public virtual void ReadConfig()
+        {
+            // 子控件重写该方法
+        }
+
+        public virtual void ShowInfo(string key)
         {
             // 子控件重写该方法
         }

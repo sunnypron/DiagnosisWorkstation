@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\IUsersBll.cs" />
+    <Compile Include="Function\IGeneralFunc.cs" />
     <Compile Include="Function\ISimpleFactory.cs" />
     <Compile Include="Initialize\IInitializeBaseData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helper\IConfigHelper.cs" />
-    <Compile Include="Function\IUsersFunc.cs" />
+    <Compile Include="DAL\IUsersDal.cs" />
     <Compile Include="Tool\ICalculation.cs" />
   </ItemGroup>
   <ItemGroup>

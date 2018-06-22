@@ -99,7 +99,7 @@ namespace DiagnosisWorkstation
         /// </summary>
         private void InitializeCytologyCtrl()
         {
-            tsddbCytologyPageStyle.Text = "界面：" + SystemSetting.DefaultUI;
+            tsddbCytologyPageStyle.Text = @"界面：" + SystemSetting.DefaultUi;
         }
 
         /// <summary>
@@ -243,27 +243,34 @@ namespace DiagnosisWorkstation
         /// <param name="tag"></param>
         private void OpenFormOfMenu(string tag)
         {
-            switch (tag)
+            try
             {
-                case "A":
-                    break;
-                case "U":
-                    break;
-                case "I":
-                    break;
-                case "D":
-                    break;
-                case "F":
-                    break;
-                case "T":
-                    break;
-                case "O":
-                    frmOptionsForm operationForm = new frmOptionsForm
-                    {
-                        StartPosition = FormStartPosition.CenterParent
-                    };
-                    operationForm.ShowDialog();
-                    break;
+                switch (tag)
+                {
+                    case "A":
+                        break;
+                    case "U":
+                        break;
+                    case "I":
+                        break;
+                    case "D":
+                        break;
+                    case "F":
+                        break;
+                    case "T":
+                        break;
+                    case "O":
+                        frmOptionsForm operationForm = new frmOptionsForm
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        operationForm.ShowDialog();
+                        break;
+                }
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show(ex.Message, @"系統提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion

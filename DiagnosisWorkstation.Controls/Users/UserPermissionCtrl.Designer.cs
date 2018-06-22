@@ -143,6 +143,7 @@
             this.lbList.Name = "lbList";
             this.lbList.Size = new System.Drawing.Size(284, 686);
             this.lbList.TabIndex = 1;
+            this.lbList.SelectedIndexChanged += new System.EventHandler(this.lbList_SelectedIndexChanged);
             // 
             // tlpContent
             // 
@@ -203,6 +204,7 @@
             this.rbPermissionInfo.TabStop = true;
             this.rbPermissionInfo.Text = "权限信息";
             this.rbPermissionInfo.UseVisualStyleBackColor = true;
+            this.rbPermissionInfo.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // rbRoleInfo
             // 
@@ -214,6 +216,7 @@
             this.rbRoleInfo.TabStop = true;
             this.rbRoleInfo.Text = "角色信息";
             this.rbRoleInfo.UseVisualStyleBackColor = true;
+            this.rbRoleInfo.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // rbUserInfo
             // 

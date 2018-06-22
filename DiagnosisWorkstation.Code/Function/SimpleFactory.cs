@@ -1,10 +1,6 @@
 ﻿using DiagnosisWorkstation.Code.Helper;
 using DiagnosisWorkstation.ICode.Helper;
 using DiagnosisWorkstation.ICode.Function;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DiagnosisWorkstation.Code.Function
 {
